@@ -3,37 +3,34 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Carousel & To Do List</title>
-
+    <title>Carousel + To Do</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
 <body>
 
-    <!-- ===== CAROUSEL ===== -->
-    <div class="container">
-        <h2>Carousel</h2>
+    <div class="card">
+        <h2>My Productivity App</h2>
 
+        <!-- ===== CAROUSEL ===== -->
         <div class="carousel">
             <img src="https://picsum.photos/id/1015/600/300" class="slide active">
             <img src="https://picsum.photos/id/1025/600/300" class="slide">
             <img src="https://picsum.photos/id/1035/600/300" class="slide">
-            <img src="https://picsum.photos/id/1045/600/300" class="slide">
-
+            <img src="https://picsum.photos/id/1050/600/300" class="slide">
+            
             <button class="prev">&#10094;</button>
             <button class="next">&#10095;</button>
         </div>
-    </div>
 
-    <!-- ===== TO DO LIST ===== -->
-    <div class="container">
-        <h2>To Do List</h2>
-
-        <input type="text" id="todoInput" placeholder="Masukkan tugas...">
-        <button id="addTodo">Tambah</button>
-
-        <ul id="todoList"></ul>
+        <!-- ===== TO DO LIST ===== -->
+        <div class="todo">
+            <h3>To Do List</h3>
+            <input type="text" id="todoInput" placeholder="Tulis tugas...">
+            <button id="addTodo">Tambah</button>
+            <ul id="todoList"></ul>
+        </div>
     </div>
 
     <script src="script.js"></script>

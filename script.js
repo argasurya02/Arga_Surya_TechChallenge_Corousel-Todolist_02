@@ -10,33 +10,26 @@ $(document).ready(function () {
   }
 
   $(".next").click(function () {
-    index++;
-    if (index >= total) {
-      index = 0;
-    }
+    index = (index + 1) % total;
     showSlide(index);
   });
 
   $(".prev").click(function () {
-    index--;
-    if (index < 0) {
-      index = total - 1;
-    }
+    index = (index - 1 + total) % total;
     showSlide(index);
   });
 
-  // ===== TO DO LIST =====
+  // ===== TODO LIST =====
   $("#addTodo").click(function () {
     let todo = $("#todoInput").val().trim();
-
-    if (todo == "") return;
+    if (todo === "") return;
 
     let item = `
       <li>
         <span class="text">${todo}</span>
         <div>
           <input type="checkbox" class="check">
-          <button class="delete">Hapus</button>
+          <button class="delete">X</button>
         </div>
       </li>
     `;
